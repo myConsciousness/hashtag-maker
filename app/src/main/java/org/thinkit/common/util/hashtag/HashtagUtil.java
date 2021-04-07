@@ -24,7 +24,12 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
 /**
+ * This utility class provides functionality for hashtag.
  *
+ * <p>
+ * For example, this is useful when you want to easily convert a string that is
+ * not in hashtag format to hashtag format. It is also possible to convert tag
+ * strings stored in list format to hashtag format.
  *
  * @author Kato Shinya
  * @since 1.0.0
@@ -33,7 +38,7 @@ import lombok.NonNull;
 public final class HashtagUtil {
 
     /**
-     *
+     * Returns the tag string passed as an argument in the form of a hashtag.
      *
      * @param tag The tag
      * @return The hash tag based on {@code tag}
@@ -45,7 +50,8 @@ public final class HashtagUtil {
     }
 
     /**
-     *
+     * Returns the list of tag strings passed as an argument as a list of hashtag
+     * strings.
      *
      * @param tags The tags
      * @return The hash tags based on {@code tags}
