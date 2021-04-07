@@ -23,7 +23,7 @@ plugins {
 
 publishing {
    publications {
-        group 'org.thinkit.common.util.hashtag'
+        group 'org.thinkit.common.util'
         version = gitVersion()
 
         gpr(MavenPublication) {

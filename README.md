@@ -30,7 +30,7 @@ Hashtag Maker main repository.
 
 ```xml
 <dependency>
-  <groupId>org.thinkit.common.util.hashtag</groupId>
+  <groupId>org.thinkit.common.util</groupId>
   <artifactId>hashtag-maker</artifactId>
   <version>v1.0.0</version>
 </dependency>
@@ -59,7 +59,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.thinkit.common.util.hashtag:hashtag-maker:v1.0.0'
+    implementation 'org.thinkit.common.util:hashtag-maker:v1.0.0'
 }
 ```
 
