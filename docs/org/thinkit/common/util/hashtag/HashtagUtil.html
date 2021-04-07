@@ -113,14 +113,14 @@ extends <a href="https://docs.oracle.com/en/java/javase/13/docs/api/java.base/ja
 <tbody>
 <tr class="alt-color" id="i0">
 <td class="col-first"><code>static <a href="https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/lang/String.html" title="java.lang内のクラスまたはインタフェース" class="external-link">String</a></code></td>
-<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#createHashTag(java.lang.String)">createHashTag</a></span>&#8203;(@NonNull <a href="https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/lang/String.html" title="java.lang内のクラスまたはインタフェース" class="external-link">String</a>&nbsp;tag)</code></th>
+<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#createHashtag(java.lang.String)">createHashtag</a></span>&#8203;(@NonNull <a href="https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/lang/String.html" title="java.lang内のクラスまたはインタフェース" class="external-link">String</a>&nbsp;tag)</code></th>
 <td class="col-last">
 <div class="block">Returns the tag string passed as an argument in the form of a hashtag.</div>
 </td>
 </tr>
 <tr class="row-color" id="i1">
 <td class="col-first"><code>static <a href="https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/util/List.html" title="java.util内のクラスまたはインタフェース" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/lang/String.html" title="java.lang内のクラスまたはインタフェース" class="external-link">String</a>&gt;</code></td>
-<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#createHashTags(java.util.List)">createHashTags</a></span>&#8203;(@NonNull <a href="https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/util/List.html" title="java.util内のクラスまたはインタフェース" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/lang/String.html" title="java.lang内のクラスまたはインタフェース" class="external-link">String</a>&gt;&nbsp;tags)</code></th>
+<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#createHashtags(java.util.List)">createHashtags</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/util/List.html" title="java.util内のクラスまたはインタフェース" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/lang/String.html" title="java.lang内のクラスまたはインタフェース" class="external-link">String</a>&gt;&nbsp;tags)</code></th>
 <td class="col-last">
 <div class="block">Returns the list of tag strings passed as an argument as a list of hashtag
  strings.</div>
@@ -145,35 +145,31 @@ extends <a href="https://docs.oracle.com/en/java/javase/13/docs/api/java.base/ja
 <h2>メソッドの詳細</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="createHashTag(java.lang.String)">
-<h3>createHashTag</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/lang/String.html" title="java.lang内のクラスまたはインタフェース" class="external-link">String</a></span>&nbsp;<span class="member-name">createHashTag</span>&#8203;(<span class="parameters">@NonNull
+<section class="detail" id="createHashtag(java.lang.String)">
+<h3>createHashtag</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/lang/String.html" title="java.lang内のクラスまたはインタフェース" class="external-link">String</a></span>&nbsp;<span class="member-name">createHashtag</span>&#8203;(<span class="parameters">@NonNull
 @NonNull <a href="https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/lang/String.html" title="java.lang内のクラスまたはインタフェース" class="external-link">String</a>&nbsp;tag)</span></div>
-<div class="block">Returns the tag string passed as an argument in the form of a hashtag.</div>
+<div class="block">Returns the tag string passed as an argument in the form of a hashtag.
+ Returns empty string if the <code>tag</code> is <code>null</code> or empty.</div>
 <dl class="notes">
 <dt>パラメータ:</dt>
 <dd><code>tag</code> - The tag</dd>
 <dt>戻り値:</dt>
 <dd>The hash tag based on <code>tag</code></dd>
-<dt>例外:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/lang/NullPointerException.html" title="java.lang内のクラスまたはインタフェース" class="external-link">NullPointerException</a></code> - If <code>null</code> is passed as an argument</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="createHashTags(java.util.List)">
-<h3>createHashTags</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/util/List.html" title="java.util内のクラスまたはインタフェース" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/lang/String.html" title="java.lang内のクラスまたはインタフェース" class="external-link">String</a>&gt;</span>&nbsp;<span class="member-name">createHashTags</span>&#8203;(<span class="parameters">@NonNull
-@NonNull <a href="https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/util/List.html" title="java.util内のクラスまたはインタフェース" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/lang/String.html" title="java.lang内のクラスまたはインタフェース" class="external-link">String</a>&gt;&nbsp;tags)</span></div>
+<section class="detail" id="createHashtags(java.util.List)">
+<h3>createHashtags</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/util/List.html" title="java.util内のクラスまたはインタフェース" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/lang/String.html" title="java.lang内のクラスまたはインタフェース" class="external-link">String</a>&gt;</span>&nbsp;<span class="member-name">createHashtags</span>&#8203;(<span class="parameters"><a href="https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/util/List.html" title="java.util内のクラスまたはインタフェース" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/lang/String.html" title="java.lang内のクラスまたはインタフェース" class="external-link">String</a>&gt;&nbsp;tags)</span></div>
 <div class="block">Returns the list of tag strings passed as an argument as a list of hashtag
- strings.</div>
+ strings. The empty string is stored if the tag is <code>null</code> or empty.</div>
 <dl class="notes">
 <dt>パラメータ:</dt>
 <dd><code>tags</code> - The tags</dd>
 <dt>戻り値:</dt>
 <dd>The hash tags based on <code>tags</code></dd>
-<dt>例外:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/lang/NullPointerException.html" title="java.lang内のクラスまたはインタフェース" class="external-link">NullPointerException</a></code> - If <code>null</code> is passed as an argument</dd>
 </dl>
 </section>
 </li>
