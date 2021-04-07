@@ -17,6 +17,7 @@ package org.thinkit.common.util.hashtag;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.apache.commons.lang3.StringUtils;
 import org.thinkit.common.util.hashtag.catalog.TagSymbol;
 
 import lombok.AccessLevel;
@@ -39,26 +40,28 @@ public final class HashtagUtil {
 
     /**
      * Returns the tag string passed as an argument in the form of a hashtag.
+     * Returns empty string if the {@code tag} is {@code null} or empty.
      *
      * @param tag The tag
      * @return The hash tag based on {@code tag}
-     *
-     * @exception NullPointerException If {@code null} is passed as an argument
      */
-    public static String createHashTag(@NonNull final String tag) {
-        return TagSymbol.HASH.getCode() + tag;
+    public static String createHashtag(@NonNull final String tag) {
+
+        if (StringUtils.isEmpty(tag)) {
+            return "";
+        }
+
+        return TagSymbol.HASH.getTag() + StringUtils.trim(tag);
     }
 
     /**
      * Returns the list of tag strings passed as an argument as a list of hashtag
-     * strings.
+     * strings. The empty string is stored if the tag is {@code null} or empty.
      *
      * @param tags The tags
      * @return The hash tags based on {@code tags}
-     *
-     * @exception NullPointerException If {@code null} is passed as an argument
      */
-    public static List<String> createHashTags(@NonNull final List<String> tags) {
-        return tags.stream().map(HashtagUtil::createHashTag).collect(Collectors.toList());
+    public static List<String> createHashtags(final List<String> tags) {
+        return tags.stream().map(HashtagUtil::createHashtag).collect(Collectors.toList());
     }
 }
