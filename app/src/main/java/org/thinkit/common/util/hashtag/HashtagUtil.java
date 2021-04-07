@@ -22,7 +22,6 @@ import org.thinkit.common.util.hashtag.catalog.TagSymbol;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
-import lombok.NonNull;
 
 /**
  * This utility class provides functionality for hashtag.
@@ -45,13 +44,15 @@ public final class HashtagUtil {
      * @param tag The tag
      * @return The hash tag based on {@code tag}
      */
-    public static String createHashtag(@NonNull final String tag) {
+    public static String createHashtag(final String tag) {
 
-        if (StringUtils.isEmpty(tag)) {
+        final String trimmedTag = StringUtils.trim(tag);
+
+        if (StringUtils.isEmpty(trimmedTag)) {
             return "";
         }
 
-        return TagSymbol.HASH.getTag() + StringUtils.trim(tag);
+        return TagSymbol.HASH.getTag() + trimmedTag;
     }
 
     /**
