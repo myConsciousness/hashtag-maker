@@ -6,11 +6,11 @@ name: Java CI with Gradle
 on:
   push:
     paths:
-      - 'src/**'
+      - 'app/src/**'
     branches: [ main ]
   pull_request:
     paths:
-      - 'src/**'
+      - 'app/src/**'
     branches: [ main ]
 
 jobs:
